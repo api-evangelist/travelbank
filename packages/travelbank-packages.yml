@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+source: npm registry search + pypi + rubygems + github.com/travelbank
+note: >-
+  TravelBank publishes no API client SDKs. The @travelbank npm scope contains
+  first-party internal engineering tooling (lint configs, a test reporter), not
+  client libraries for a public API. PyPI (404) and RubyGems (empty) have
+  nothing. The GitHub org (github.com/travelbank, 24 public repos) is almost
+  entirely forks of third-party libraries the platform consumes (Sabre,
+  Expedia EAN, Duffel clients; LoopBack; Ember addons) — no first-party SDK,
+  OpenAPI, protobuf, CLI, or MCP repos.
+packages:
+  - language: javascript
+    registry: npm
+    name: "@travelbank/tslint-config"
+    url: https://www.npmjs.com/package/@travelbank/tslint-config
+    install: npm install @travelbank/tslint-config
+    official: true
+    purpose: internal-tooling   # TSLint rules for TravelBank — not an API SDK
+  - language: javascript
+    registry: npm
+    name: "@travelbank/eslint-config-travelbank"
+    url: https://www.npmjs.com/package/@travelbank/eslint-config-travelbank
+    install: npm install @travelbank/eslint-config-travelbank
+    official: true
+    purpose: internal-tooling   # shared eslint config — not an API SDK
+  - language: javascript
+    registry: npm
+    name: "@travelbank/mocha-testrail-reporter"
+    url: https://www.npmjs.com/package/@travelbank/mocha-testrail-reporter
+    install: npm install @travelbank/mocha-testrail-reporter
+    official: true
+    purpose: internal-tooling   # mocha TestRail reporter — not an API SDK
+api_client_sdks: []

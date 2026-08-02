@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: https://travelbank.com/security
+note: >-
+  TravelBank publishes no API surface, so API-level standards (oauth2, oidc,
+  rfc9457, json:api, pagination, idempotency) cannot be asserted either way.
+  The published security page carries data-privacy compliance statements only;
+  no SOC 2, ISO 27001, or PCI DSS certification is claimed there.
+standards:
+  - id: gdpr
+    conforms: true
+    evidence: >-
+      travelbank.com/security states "our policies fall in line with the
+      General Data Protection Regulation (GDPR)"
+  - id: ccpa
+    conforms: true
+    evidence: >-
+      travelbank.com/security confirms compliance with the California Consumer
+      Privacy Act (CCPA)
+  - id: soc2
+    conforms: null
+    evidence: not claimed on the public security page
+  - id: iso-27001
+    conforms: null
+    evidence: not claimed on the public security page
+  - id: pci-dss
+    conforms: null
+    evidence: not claimed on the public security page
+security_practices:
+  - "Data encrypted at rest and in transit (security page)"
+  - "Hosted on AWS with data center and environmental controls"
+  - "Regular OWASP Top 10 vulnerability scanning and penetration testing"
+  - "12-hour maximum RTO/RPO with regular backups"

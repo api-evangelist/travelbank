@@ -1,8 +1,26 @@
 aid: travelbank
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/travelbank.png
 name: TravelBank
-description: 'TravelBank is a company surfaced as a portfolio company of dcm-ventures and added to the
-  API Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  TravelBank, a U.S. Bank company, is an all-in-one corporate travel, expense,
+  and card management platform used by more than 45,000 companies. It combines
+  travel booking for flights, hotels, and cars with expense tracking, corporate
+  and virtual card reconciliation, approval workflows, and reporting, and ships
+  pre-built integrations with QuickBooks, NetSuite, Xero, U.S. Bank, and Brex.
+  TravelBank publishes no public developer API: its platform API at
+  api.travelbank.com is private and undocumented, and integrations are
+  pre-built or delivered as custom work.
 url: https://raw.githubusercontent.com/api-evangelist/travelbank/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +28,22 @@ x-backed-by:
 - dcm-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Enterprise
+- Travel
+- Expense Management
+- Corporate Cards
+- Fintech
+- Travel Booking
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +53,33 @@ maintainers:
 common:
 - type: Website
   url: https://travelbank.com/
+- type: Login
+  url: https://app.travelbank.com/
+- type: Support
+  url: https://support.travelbank.com/
+- type: Blog
+  url: https://travelbank.com/blog
+- type: Pricing
+  url: https://travelbank.com/pricing-premium/
+- type: Integrations
+  url: https://travelbank.com/integrations
+- type: TermsOfService
+  url: https://travelbank.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://travelbank.com/privacy-policy/
+- type: StatusPage
+  url: https://status.travelbank.com/
+- type: GitHubOrganization
+  url: https://github.com/travelbank
+- type: Compliance
+  url: https://travelbank.com/security
+- type: Conformance
+  url: conformance/travelbank-conformance.yml
+- type: Lifecycle
+  url: lifecycle/travelbank-lifecycle.yml
+- type: Packages
+  url: packages/travelbank-packages.yml
+- type: LLMsTxt
+  url: llms/travelbank-llms.txt
+- type: DomainSecurity
+  url: security/travelbank-domain-security.yml

@@ -1,0 +1,46 @@
+generated: '2026-07-21'
+method: searched
+source: live probe of travelbank.com, www.travelbank.com, app.travelbank.com, api.travelbank.com
+note: >-
+  No /.well-known/ discovery documents are published. app.travelbank.com returns
+  HTTP 200 for every path but it is a single-page-app catch-all serving text/html
+  (verified via content-type), so those are not real documents. api.travelbank.com
+  is a live JSON API host (root returns an uptime/health payload) but a WAF returns
+  403 for all discovery paths.
+hosts:
+  - host: https://travelbank.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /llms.txt, status: 404}
+      - {path: /security.txt, status: 404}
+  - host: https://www.travelbank.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /llms.txt, status: 404}
+      - {path: /security.txt, status: 404}
+  - host: https://app.travelbank.com
+    note: SPA catch-all — every path returns 200 text/html; no real well-known documents
+    documents:
+      - {path: /.well-known/security.txt, status: 200, false_positive: spa-catch-all}
+      - {path: /.well-known/openid-configuration, status: 200, false_positive: spa-catch-all}
+      - {path: /.well-known/oauth-authorization-server, status: 200, false_positive: spa-catch-all}
+      - {path: /.well-known/api-catalog, status: 200, false_positive: spa-catch-all}
+      - {path: /.well-known/ai-plugin.json, status: 200, false_positive: spa-catch-all}
+      - {path: /llms.txt, status: 200, false_positive: spa-catch-all}
+  - host: https://api.travelbank.com
+    note: live JSON API host (root returns {started, uptime}); WAF 403s all discovery paths
+    documents:
+      - {path: /.well-known/security.txt, status: 403}
+      - {path: /.well-known/openid-configuration, status: 403}
+      - {path: /.well-known/oauth-authorization-server, status: 403}
+      - {path: /.well-known/api-catalog, status: 403}
+      - {path: /.well-known/ai-plugin.json, status: 403}
+      - {path: /llms.txt, status: 403}

@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+source: https://status.travelbank.com/
+status_page: https://status.travelbank.com/
+status_page_components:
+  - Core Operational
+  - Login
+  - API
+  - Premium Insights
+  - Notifications
+  - Credit Card Sync
+  - Email Forwarding
+  - Expense Reports
+  - Expense Receipts
+  - Reimbursements
+  - Flights (Search, Book)
+  - Hotels (Search, Book, Analytics)
+  - Cars (Search, Booking)
+  - OCR
+  - Website
+  - Rewards
+  - Accounting Integrations (QuickBooks Online, NetSuite, Xero)
+  - Commercial Rewards
+sla:
+  uptime_claim: "99.9% uptime"          # https://travelbank.com/security
+  uptime_observed_90d: "99.92%"         # status page, probed 2026-07-21
+  rto_rpo: "12-hour maximum RTO and RPO with regular backups"  # security page
+versioning: null        # no public versioning policy published
+deprecation: null       # no public deprecation policy published
+notes: >-
+  TravelBank (a U.S. Bank company) operates a public status page at
+  status.travelbank.com covering core services including an "API" component,
+  expenses, travel booking, and accounting integrations, with email/Teams/
+  webhook/feed subscription options. No public API versioning or deprecation
+  policy exists because the platform API (api.travelbank.com) is private and
+  undocumented.
