@@ -16,3 +16,34 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: travelbank-npm-registry
+  label: npm registry
+  partner: npm
+  partner_name: npm registry
+  category: official SDK (JavaScript/TypeScript)
+  type: register
+  channel: package-registry
+  evidence: https://www.npmjs.com/package/@travelbank/mocha-testrail-reporter
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: '@travelbank/mocha-testrail-reporter'
+      version: 1.0.13
+      released: '2026-04-30'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@travelbank/mocha-testrail-reporter
+      repo_leg: github-org:travelbank
+      publisher_leg: email:travelbank.com
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  status: not-a-workflow
+  arazzo: null
